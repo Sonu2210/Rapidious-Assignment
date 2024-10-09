@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("background.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="number"], 
+input[type="text"], 
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus, 
+input[type="text"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+h2 {
+    text-align: center;
+    color: #4A90E2;
+    margin-top: 30px;
+}
+
+/* Make the form responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 50px 15px;
+    }
+}

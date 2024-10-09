@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Rating </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Recipe Rating </h1>
+        <form action="/calculate" method="post">
+            <label for="calories">Calories:</label>
+            <input type="number" step="any" name="calories" required><br>
+
+            <label for="protein">Protein:</label>
+            <input type="number" step="any" name="protein" required><br>
+
+            <label for="fat">Fat:</label>
+            <input type="number" step="any" name="fat" required><br>
+
+            <label for="sodium">Sodium:</label>
+            <input type="number" step="any" name="sodium" required><br>
+
+            <input type="submit" value="Total Rating">
+        </form>
+
+        {% if rating is not none %}
+            <h2>Predicted Rating: {{ rating }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
